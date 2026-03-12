@@ -5,6 +5,7 @@
   const next = document.getElementById("heroNext");
   const menuToggle = document.getElementById("menuToggle");
   const mobileMenu = document.getElementById("mobileMenu");
+  const mobileLinks = mobileMenu ? mobileMenu.querySelectorAll("a") : [];
 
   if (track && dots.length && prev && next) {
     let current = 0;
@@ -53,6 +54,7 @@
         render(current - 1);
         startAuto();
       }
+
       if (event.key === "ArrowRight") {
         render(current + 1);
         startAuto();
@@ -64,9 +66,28 @@
   }
 
   if (menuToggle && mobileMenu) {
-    menuToggle.addEventListener("click", () => {
+    function closeMenu() {
+      mobileMenu.classList.remove("is-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+    }
+
+    function toggleMenu() {
       const isOpen = mobileMenu.classList.toggle("is-open");
       menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    }
+
+    menuToggle.addEventListener("click", toggleMenu);
+
+    mobileLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        closeMenu();
+      });
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeMenu();
+      }
     });
   }
 })();
