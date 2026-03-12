@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>La ciencia detrás de nuestros productos</title>
+
+<meta name="description" content="Información clara y basada en evidencia sobre los compuestos presentes en los productos Alunexa.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600&family=Noto+Serif:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+
+<style>
+
+.science-page{
+padding:120px 0 90px;
+}
+
+.science-header{
+max-width:900px;
+margin:0 auto 60px;
+text-align:center;
+}
+
+.science-header h1{
+margin:0 0 14px;
+font-family:"Noto Serif",serif;
+font-size:clamp(2.6rem,4vw,4rem);
+line-height:1.05;
+}
+
+.science-header p{
+margin:0 auto;
+max-width:40ch;
+color:var(--muted);
+}
+
+.science-grid{
+max-width:1100px;
+margin:0 auto;
+display:grid;
+grid-template-columns:repeat(3,minmax(0,1fr));
+gap:26px;
+padding:0 16px;
+}
+
+.science-card{
+background:white;
+border:1px solid rgba(231,223,212,.95);
+border-radius:24px;
+padding:28px 26px;
+box-shadow:0 16px 28px rgba(17,17,17,.05);
+}
+
+.science-card h2{
+margin:0 0 14px;
+font-family:"Noto Serif",serif;
+font-size:1.8rem;
+}
+
+.science-card p{
+margin:0;
+color:var(--muted);
+line-height:1.6;
+}
+
+@media (max-width:900px){
+
+.science-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="site-header">
+
+<div class="container header-inner">
+
+<a href="index.html" class="brand">
+<img class="brand-logo" src="assets/logo-alunexa.svg" alt="Logo Alunexa">
+<div class="brand-name">ALUNEXA</div>
+</a>
+
+<nav class="nav" aria-label="Principal">
+
+<a href="index.html">Inicio</a>
+<a href="tienda.html">Tienda</a>
+<a href="index.html#areas">Áreas de salud</a>
+<a href="ciencia.html">La ciencia</a>
+<a href="sobre-alunexa.html">Sobre Alunexa</a>
+<a href="sobre-alunexa.html#contacto">Contacto</a>
+
+</nav>
+
+</div>
+
+</header>
+
+<main class="science-page">
+
+<section class="science-header">
+
+<h1>La ciencia detrás de nuestros productos</h1>
+
+<p>
+Comprender los compuestos naturales, estudiar su funcionamiento y utilizar ese conocimiento con criterio.
+</p>
+
+</section>
+
+<section class="science-grid">
+
+<article id="omega-3" class="science-card">
+
+<h2>Oxidación del omega 3</h2>
+
+<p>
+Los aceites ricos en omega 3 son altamente sensibles a la oxidación. La calidad del proceso de extracción, almacenamiento y encapsulación determina su estabilidad y eficacia real.
+</p>
+
+</article>
+
+<article id="magnesio" class="science-card">
+
+<h2>Biodisponibilidad del magnesio</h2>
+
+<p>
+No todas las formas de magnesio se absorben igual. Formas como el bisglicinato presentan una mayor biodisponibilidad y una mejor tolerancia digestiva.
+</p>
+
+</article>
+
+<article id="curcuma" class="science-card">
+
+<h2>Cúrcuma y absorción</h2>
+
+<p>
+La curcumina posee baja absorción natural. Por eso suele combinarse con piperina u otros sistemas que mejoran su biodisponibilidad.
+</p>
+
+</article>
+
+</section>
+
+</main>
+
+<footer class="site-footer">
+
+<div class="container">
+
+<div class="footer-grid" style="grid-template-columns:1.2fr 1fr;">
+
+<div class="footer-brand">
+
+<div class="brand">
+<img class="brand-logo" src="assets/logo-alunexa.svg" alt="Logo Alunexa">
+<div class="brand-name">ALUNEXA</div>
+</div>
+
+</div>
+
+<div class="footer-col">
+
+<h4>Contacto</h4>
+
+<div class="footer-links">
+
+<a href="mailto:contacto@alunexatienda.com">contacto@alunexatienda.com</a>
+<span>Mendoza 7279, Rosario</span>
+<a href="tel:+5493417553252">+54 9 341 755-3252</a>
+<a href="tel:+5493415643311">+54 9 341 564-3311</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<span>© 2026 Alunexa. Todos los derechos reservados.</span>
+
+</div>
+
+</div>
+
+</footer>
+
+</body>
+
+</html>
