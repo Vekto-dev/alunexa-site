@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tienda Alunexa</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Noto+Serif:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+
+<style>
+
+.page-header{
+padding:120px 0 80px;
+text-align:center;
+}
+
+.page-header h1{
+font-family:"Noto Serif";
+font-size:48px;
+margin-bottom:10px;
+}
+
+.page-header p{
+color:#666;
+}
+
+.catalog{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+padding-bottom:120px;
+}
+
+.product-card{
+background:white;
+border-radius:16px;
+padding:40px 30px;
+text-align:center;
+box-shadow:0 8px 24px rgba(0,0,0,0.05);
+transition:0.25s;
+}
+
+.product-card:hover{
+transform:translateY(-6px);
+}
+
+.product-card img{
+height:200px;
+object-fit:contain;
+margin-bottom:20px;
+}
+
+.product-card h3{
+font-family:"Noto Serif";
+margin-bottom:10px;
+}
+
+.product-card p{
+font-size:14px;
+color:#666;
+margin-bottom:20px;
+}
+
+.buy-btn{
+display:inline-block;
+padding:10px 18px;
+border-radius:30px;
+background:#d6b15a;
+color:white;
+font-weight:500;
+}
+
+@media(max-width:900px){
+
+.catalog{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:600px){
+
+.catalog{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="site-header">
+<div class="container header-inner">
+
+<a href="index.html" class="brand">
+<img class="brand-logo" src="assets/logo-alunexa.svg">
+<div class="brand-name">ALUNEXA</div>
+</a>
+
+<nav class="nav">
+<a href="index.html">Inicio</a>
+<a href="tienda.html">Tienda</a>
+<a href="index.html#areas">Áreas</a>
+<a href="index.html#ciencia">Ciencia</a>
+<a href="sobre-alunexa.html">Sobre Alunexa</a>
+</nav>
+
+</div>
+</header>
+
+<section class="page-header">
+
+<h1>Nuestra línea</h1>
+
+<p>Suplementos formulados con criterio y equilibrio.</p>
+
+</section>
+
+<section class="catalog">
+
+<div class="product-card">
+
+<img src="assets/bisglicinato-magnesio.png">
+
+<h3>Bisglicinato de Magnesio</h3>
+
+<p>Alta biodisponibilidad para descanso y función muscular.</p>
+
+<a class="buy-btn" href="#">Comprar</a>
+
+</div>
+
+<div class="product-card">
+
+<img src="assets/citrato-magnesio.png">
+
+<h3>Citrato de Magnesio</h3>
+
+<p>Apoyo digestivo y equilibrio mineral.</p>
+
+<a class="buy-btn" href="#">Comprar</a>
+
+</div>
+
+<div class="product-card">
+
+<img src="assets/multimagnesio.png">
+
+<h3>Multimagnesio</h3>
+
+<p>Combinación de formas de magnesio para uso cotidiano.</p>
+
+<a class="buy-btn" href="#">Comprar</a>
+
+</div>
+
+<div class="product-card">
+
+<img src="assets/vitamina-b12.png">
+
+<h3>Vitamina B12</h3>
+
+<p>Energía celular y función neurológica.</p>
+
+<a class="buy-btn" href="#">Comprar</a>
+
+</div>
+
+</section>
+
+</body>
+</html>

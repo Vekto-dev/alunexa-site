@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alunexa — Ciencia y naturaleza</title>
+  <meta name="description" content="Suplementos formulados con criterio. Ciencia y naturaleza para el bienestar cotidiano." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600&family=Noto+Serif:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#inicio" class="brand" aria-label="Alunexa inicio">
+        <img class="brand-logo" src="assets/logo-alunexa.svg" alt="Logo Alunexa">
+        <div class="brand-name">ALUNEXA</div>
+      </a>
+
+      <nav class="nav" aria-label="Principal">
+  <a href="#inicio">Inicio</a>
+  <a href="tienda.html">Tienda</a>
+  <a href="#areas">Áreas de salud</a>
+  <a href="#ciencia">La ciencia</a>
+  <a href="sobre-alunexa.html">Sobre Alunexa</a>
+  <a href="sobre-alunexa.html#contacto">Contacto</a>
+</nav>
+
+    </div>
+  </header>
+
+  <main id="inicio">
+    <div class="hero-wrap container">
+      <section class="hero-stack hero-slider" aria-label="Presentación principal deslizable">
+        <div class="hero-track" id="heroTrack">
+          <article class="hero-panel">
+            <div class="hero-copy">
+              <div class="mini-note">Inicio · Línea aspiracional</div>
+              <h1 class="heading-serif">Conocé nuestra familia de magnesios.</h1>
+              <p>Tres formas de magnesio formuladas para acompañar el bienestar cotidiano.</p>
+              <div>
+                <a class="btn-mini" href="tienda.html">Conocer fórmula</a>
+              </div>
+            </div>
+
+            <div class="hero-visual" aria-hidden="true">
+              <div class="abstract seed"></div>
+              <div class="abstract almond" style="right:auto; left:38%; top:24px; width:160px; height:150px; opacity:.12;"></div>
+              <div class="abstract turmeric"></div>
+              <div class="hero-products" style="gap:12px; align-items:center; justify-content:center; padding:24px;">
+                <img src="assets/bisglicinato-magnesio.png" alt="Bisglicinato de Magnesio" style="width:min(31%, 270px); height:auto; object-fit:contain; filter:drop-shadow(0 20px 28px rgba(17,17,17,.16));">
+                <img src="assets/citrato-magnesio.png" alt="Citrato de Magnesio" style="width:min(31%, 270px); height:auto; object-fit:contain; filter:drop-shadow(0 20px 28px rgba(17,17,17,.16));">
+                <img src="assets/multimagnesio.png" alt="Multimagnesio" style="width:min(31%, 270px); height:auto; object-fit:contain; filter:drop-shadow(0 20px 28px rgba(17,17,17,.16));">
+              </div>
+            </div>
+          </article>
+
+          <article class="hero-panel">
+            <div class="hero-copy">
+              <div class="mini-note">Inicio · Producto destacado</div>
+              <h2 class="heading-serif">Vitamina B12.</h2>
+              <p>Energía diaria y función neurológica.</p>
+              <div>
+                <a class="btn-mini" href="tienda.html">Conocer fórmula</a>
+              </div>
+            </div>
+
+            <div class="hero-visual" aria-hidden="true">
+              <div class="abstract b12leaf"></div>
+              <div class="texture texture-a"></div>
+              <div class="hero-products" style="justify-content:flex-end; padding-right:58px; align-items:center;">
+                <img src="assets/vitamina-b12.png" alt="Vitamina B12" style="width:min(66%, 460px); height:auto; object-fit:contain; filter:drop-shadow(0 22px 30px rgba(17,17,17,.18));">
+              </div>
+            </div>
+          </article>
+
+          <article class="hero-panel">
+            <div class="hero-copy">
+              <div class="mini-note">Próximamente</div>
+              <h2 class="heading-serif">NAD</h2>
+              <p>Energía celular y equilibrio metabólico.</p>
+              <div>
+                <a class="btn-mini" href="tienda.html">Conocer fórmula</a>
+              </div>
+            </div>
+
+            <div class="hero-visual" aria-hidden="true">
+              <div class="abstract orange"></div>
+              <div class="abstract oil" style="right:auto; left:44%; bottom:22px; top:auto; opacity:.12;"></div>
+              <div class="texture texture-b"></div>
+              <div class="hero-products" style="justify-content:flex-end; padding-right:68px; align-items:center;">
+                <div style="width:min(60%, 410px); min-height:250px; border-radius:24px; border:1px solid rgba(231,223,212,.9); background:linear-gradient(135deg, rgba(255,255,255,.88), rgba(255,255,255,.62)); box-shadow:0 22px 34px rgba(17,17,17,.08); display:grid; place-items:center; text-align:center; padding:28px;">
+                  <div>
+                    <div style="font-size:.78rem; letter-spacing:.18em; text-transform:uppercase; color:var(--green-deep); font-weight:700; margin-bottom:10px;">Próximamente</div>
+                    <div class="heading-serif" style="font-size:2.4rem; line-height:1; margin-bottom:10px;">NAD</div>
+                    <div style="color:var(--muted); max-width:22ch; margin:0 auto;">Energía celular y equilibrio metabólico.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="hero-slider-controls" aria-label="Controles del slider aspiracional">
+          <div class="hero-nav">
+            <button class="hero-arrow" id="heroPrev" aria-label="Slide anterior">←</button>
+            <button class="hero-arrow" id="heroNext" aria-label="Slide siguiente">→</button>
+          </div>
+          <div class="hero-dots" id="heroDots" aria-label="Indicadores de slide" style="position:absolute; right:18px; bottom:16px; top:auto; transform:none; flex-direction:row; gap:8px;">
+            <button class="hero-dot active" data-slide="0" aria-label="Ir al slide 1"></button>
+            <button class="hero-dot" data-slide="1" aria-label="Ir al slide 2"></button>
+            <button class="hero-dot" data-slide="2" aria-label="Ir al slide 3"></button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="quote-block section-tight">
+      <div class="quote-decoration quote-left"></div>
+      <div class="quote-decoration quote-right"></div>
+      <div class="container quote-card">
+        <blockquote>“No más de lo necesario. No menos de lo que el cuerpo necesita.”</blockquote>
+        <p>Buscando equilibrio real para uso cotidiano.</p>
+      </div>
+    </section>
+
+    <section id="areas" class="section">
+      <div class="container">
+        <div class="area-strip">
+          <div class="section-head">
+            <h2 class="section-title heading-serif">Áreas de salud</h2>
+          </div>
+
+          <div class="grid-areas">
+            <a class="health-link" href="#tienda"><span class="health-symbol">△</span><span>Energía</span></a>
+            <a class="health-link" href="#tienda"><span class="health-symbol">◇</span><span>Defensas</span></a>
+            <a class="health-link" href="#tienda"><span class="health-symbol">☾</span><span>Descanso</span></a>
+            <a class="health-link" href="#tienda"><span class="health-symbol">♡</span><span>Cardiovascular</span></a>
+            <a class="health-link" href="#tienda"><span class="health-symbol">✿</span><span>Digestivo</span></a>
+            <a class="health-link" href="#tienda"><span class="health-symbol">◎</span><span>Mente</span></a>
+            <a class="health-link" href="#tienda"><span class="health-symbol">✧</span><span>Nutricosmética</span></a>
+            <a class="health-link" href="#tienda"><span class="health-symbol">◌</span><span>Articulaciones</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ciencia" class="section" style="background: rgba(255,253,249,0.44); border-top: 1px solid rgba(231,223,212,0.95); border-bottom: 1px solid rgba(231,223,212,0.95);">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title heading-serif">La ciencia detrás de nuestros productos</h2>
+        </div>
+
+        <div class="science-grid">
+  <a class="science-card" href="ciencia.html#omega-3">
+    <div class="science-media">
+      <div class="science-art science-omega"></div>
+      <div class="science-bottle"></div>
+    </div>
+    <div class="science-copy">
+      <h3>Oxidación del omega 3 y diferencias</h3>
+    </div>
+  </a>
+
+  <a class="science-card" href="ciencia.html#magnesio">
+    <div class="science-media">
+      <div class="science-art science-mag"></div>
+      <div class="science-bottle" style="left:calc(50% - 38px);"></div>
+    </div>
+    <div class="science-copy">
+      <h3>Biodisponibilidad del magnesio</h3>
+    </div>
+  </a>
+
+  <a class="science-card" href="ciencia.html#curcuma">
+    <div class="science-media">
+      <div class="science-art science-curcuma"></div>
+    </div>
+    <div class="science-copy">
+      <h3>Cúrcuma y absorción</h3>
+    </div>
+  </a>
+</div>
+    </section>
+
+    <section id="sobre" class="section about-section">
+      <div class="container">
+        <div class="about-media" aria-hidden="true" style="min-height:360px; display:grid; grid-template-columns:1.1fr .9fr; align-items:stretch; overflow:hidden;">
+          <div class="about-copy" style="border:none; box-shadow:none; background:transparent; border-radius:0; padding:52px 46px;">
+            <h2 class="heading-serif" style="font-size:clamp(2rem,3.4vw,3.4rem);">Sobre Alunexa</h2>
+            <p style="max-width:34ch;">Ciencia y naturaleza como ideal.</p>
+            <div>
+              <a class="btn" href="sobre-alunexa.html">Nuestra Historia</a>
+            </div>
+          </div>
+
+          <div class="lab-stage">
+            <div class="lab-shape-1"></div>
+            <div class="lab-shape-2"></div>
+            <div class="lab-panel"></div>
+            <div class="lab-card"></div>
+            <div class="lab-card small"></div>
+            <div class="bottle-lab"></div>
+            <div class="beaker"></div>
+            <div class="mortar"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid" style="grid-template-columns:1.2fr 1fr;">
+        <div class="footer-brand">
+          <div class="brand">
+            <img class="brand-logo" src="assets/logo-alunexa.svg" alt="Logo Alunexa">
+            <div class="brand-name">ALUNEXA</div>
+          </div>
+          
+        </div>
+
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <div class="footer-links">
+            <a href="mailto:contacto@alunexatienda.com">contacto@alunexatienda.com</a>
+            <span>Mendoza 7279, Rosario</span>
+            <a href="tel:+5493417553252">+54 9 341 755-3252</a>
+            <a href="tel:+5493415643311">+54 9 341 564-3311</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Alunexa. Todos los derechos reservados.</span>
+        
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
