@@ -148,7 +148,7 @@ button{font:inherit}
 .btn-mini{
   border-radius:999px;
   border:1px solid transparent;
-  transition:.22s ease;
+  transition:all .22s ease;
   cursor:pointer;
 }
 .icon-btn{
@@ -366,7 +366,7 @@ button{font:inherit}
   box-shadow:0 8px 18px rgba(17,17,17,.03);
   cursor:pointer;
   opacity: 0.16;
-  transition:.22s ease;
+  transition:all .22s ease;
   backdrop-filter:blur(4px);
 }
 
@@ -396,11 +396,19 @@ button{font:inherit}
 .hero-dot{
   width:6px;
   height:6px;
+  border-radius:999px;
+  border:none;
+  padding:0;
+  background:rgba(35,72,44,.18);
+  cursor:pointer;
+  transition:all .22s ease;
 }
 
 .hero-dot.active{
   width:28px;
   height:6px;
+  border-radius:999px;
+  background:var(--gold);
 }
 
 .quote-block{
@@ -457,7 +465,7 @@ rgba(255,253,249,.6);
   padding:14px 4px;
   border-bottom:1px solid rgba(35,72,44,.08);
   color:#2d2924;
-  transition:.22s ease;
+  transition:all .22s ease;
 }
 .health-symbol{
   width:32px;
@@ -470,7 +478,7 @@ rgba(255,253,249,.6);
   font-size:.9rem;
   background:rgba(255,255,255,.55);
   flex:0 0 auto;
-  transition:.22s ease;
+  transition:all .22s ease;
 }
 .health-link:hover{
   transform:translateX(4px);
@@ -719,4 +727,37 @@ grid-template-columns:auto 1fr;
   .quote-card{
     padding:36px 12px;
   }
+}
+:focus-visible{
+  outline:2px solid var(--gold);
+  outline-offset:2px;
+}
+
+.hero-dot{
+  width:6px;
+  height:6px;
+  border-radius:999px;
+  background:rgba(35,72,44,.18);
+  border:none;
+  transition:all .22s ease;
+}
+
+.hero-dot.active{
+  width:28px;
+  height:6px;
+  border-radius:999px;
+  background:var(--gold);
+}
+
+.icon-btn,
+.btn,
+.btn-mini,
+.health-link,
+.science-card,
+.hero-arrow{
+  transition:all .22s ease;
+}
+:focus-visible{
+  outline:2px solid var(--gold);
+  outline-offset:2px;
 }
