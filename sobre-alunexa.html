@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Alunexa</title>
+  <meta name="description" content="Conocé la historia de Alunexa, una marca creada con el ideal de unir ciencia y naturaleza.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600&family=Noto+Serif:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .about-page{
+      padding:120px 0 90px;
+    }
+
+    .about-hero{
+      max-width:980px;
+      margin:0 auto 56px;
+      text-align:center;
+    }
+
+    .about-hero h1{
+      margin:0 0 14px;
+      font-family:"Noto Serif", serif;
+      font-size:clamp(2.6rem, 4.5vw, 4.4rem);
+      line-height:1.05;
+      color:var(--text);
+    }
+
+    .about-hero p{
+      margin:0 auto;
+      max-width:42ch;
+      color:var(--muted);
+      font-size:1.03rem;
+      line-height:1.6;
+    }
+
+    .about-layout{
+      max-width:1180px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:30px;
+      align-items:start;
+      padding:0 16px;
+    }
+
+    .about-text-card,
+    .about-media-card,
+    .contact-card{
+      background:rgba(255,255,255,.92);
+      border:1px solid rgba(231,223,212,.95);
+      border-radius:28px;
+      box-shadow:0 16px 28px rgba(17,17,17,.05);
+    }
+
+    .about-text-card{
+      padding:34px 30px;
+    }
+
+    .about-text-card p{
+      margin:0 0 18px;
+      color:var(--muted);
+      line-height:1.72;
+      font-size:1rem;
+    }
+
+    .about-text-card p:last-child{
+      margin-bottom:0;
+    }
+
+    .about-text-card strong{
+      color:var(--text);
+    }
+
+    .about-media-card{
+      min-height:520px;
+      position:relative;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(67,120,72,.08), transparent 26%),
+        radial-gradient(circle at 82% 78%, rgba(214,177,90,.12), transparent 24%),
+        linear-gradient(135deg, #f8f4ed 0%, #ebe2d6 100%);
+    }
+
+    .about-media-inner{
+      position:absolute;
+      inset:28px;
+      border-radius:24px;
+      border:1px solid rgba(255,255,255,.4);
+      background:linear-gradient(180deg, rgba(255,255,255,.28), rgba(255,255,255,.08));
+      overflow:hidden;
+    }
+
+    .about-media-placeholder{
+      position:absolute;
+      inset:0;
+      display:grid;
+      place-items:center;
+      text-align:center;
+      padding:30px;
+    }
+
+    .about-media-placeholder h2{
+      margin:0 0 10px;
+      font-family:"Noto Serif", serif;
+      font-size:clamp(1.8rem, 3vw, 2.8rem);
+      line-height:1.1;
+      color:#2a251f;
+    }
+
+    .about-media-placeholder p{
+      margin:0;
+      max-width:24ch;
+      color:var(--muted);
+      line-height:1.6;
+    }
+
+    .contact-section{
+      max-width:1180px;
+      margin:34px auto 0;
+      padding:0 16px;
+    }
+
+    .contact-card{
+      padding:26px 28px;
+    }
+
+    .contact-card h3{
+      margin:0 0 16px;
+      font-family:"Noto Serif", serif;
+      font-size:1.8rem;
+      color:#27231f;
+    }
+
+    .contact-lines{
+      display:grid;
+      gap:12px;
+    }
+
+    .contact-lines a,
+    .contact-lines span{
+      color:var(--muted);
+      line-height:1.6;
+      font-size:1rem;
+    }
+
+    @media (max-width: 900px){
+      .about-layout{
+        grid-template-columns:1fr;
+      }
+
+      .about-media-card{
+        min-height:360px;
+      }
+    }
+
+    @media (max-width: 640px){
+      .about-page{
+        padding:105px 0 70px;
+      }
+
+      .about-text-card,
+      .contact-card{
+        padding:24px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Alunexa inicio">
+        <img class="brand-logo" src="assets/logo-alunexa.svg" alt="Logo Alunexa">
+        <div class="brand-name">ALUNEXA</div>
+      </a>
+
+      <nav class="nav" aria-label="Principal">
+        <a href="index.html">Inicio</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="index.html#areas">Áreas de salud</a>
+        <a href="index.html#ciencia">La ciencia</a>
+        <a href="sobre-alunexa.html">Sobre Alunexa</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="about-page">
+    <section class="about-hero">
+      <h1>Nuestra historia comienza mucho antes del nacimiento de Alunexa.</h1>
+      <p>Ciencia y naturaleza como ideal. Una marca creada para formular con criterio, basados en evidencia y pensados para acompañar el bienestar cotidiano.</p>
+    </section>
+
+    <section class="about-layout">
+      <article class="about-text-card">
+        <p>Desde muy jóvenes empezamos a trabajar en el mundo de los productos naturales, ayudando en una pequeña tienda familiar de alimentos naturales. Fue en ese entorno donde comenzó a formarse nuestro interés por la nutrición, las plantas medicinales y el bienestar.</p>
+
+        <p>Con el paso del tiempo, ese interés se transformó en algo más profundo. Nos motivaba aprender, estudiar y entender cómo funcionan los distintos extractos, compuestos naturales y nutrientes. Nos fascinaba descubrir cómo se puede estudiar la naturaleza y extraer de ella principios activos capaces de aportar beneficios reales al cuerpo.</p>
+
+        <p>Desde aquellos primeros años existía una idea que nos acompañaba constantemente: que algún día este sería nuestro proyecto. Poder dedicarnos plenamente a desarrollar productos relacionados con el mismo interés y la misma curiosidad con la que siempre aprendimos sobre extractos, plantas y nutrición.</p>
+
+        <p>Durante años seguimos aprendiendo, estudiando y creciendo, mientras esa idea seguía presente.</p>
+
+        <p>Finalmente, después de mucho tiempo de formación, experiencia y reflexión, decidimos dar el paso y convertir ese proyecto en realidad.</p>
+
+        <p><strong>Así nace Alunexa.</strong></p>
+
+        <p>Una marca creada con una convicción muy clara: desarrollar productos que respeten el equilibrio natural del cuerpo humano. Fórmulas realmente beneficiosas, con porciones de extractos reales, cantidades adecuadas de principios activos y formulaciones alineadas con los estudios clínicos más sólidos disponibles.</p>
+
+        <p>Creemos que la investigación aplicada a lo natural representa una de las formas más inteligentes de mejorar el bienestar humano. Comprender cómo funciona el cuerpo, estudiar los compuestos naturales y utilizar ese conocimiento con responsabilidad.</p>
+
+        <p>Alunexa nace con ese propósito.</p>
+
+        <p>Crear productos formulados con criterio, basados en evidencia y pensados para acompañar el bienestar cotidiano de las personas.</p>
+
+        <p>Porque para nosotros, más que una marca, Alunexa es la materialización de algo que nos acompañó durante muchos años.</p>
+
+        <p>No es simplemente la idea de hacer suplementos. Las ideas pueden surgir y desaparecer.</p>
+
+        <p>Lo que nos impulsa es algo más profundo: <em>un ideal.</em></p>
+
+        <p>La convicción de que el verdadero equilibrio se encuentra en la unión de dos principios fundamentales.</p>
+
+        <p><strong>Ciencia y naturaleza.</strong></p>
+      </article>
+
+      <aside class="about-media-card" aria-hidden="true">
+        <div class="about-media-inner">
+          <div class="about-media-placeholder">
+            <div>
+              <h2>Laboratorio e identidad visual</h2>
+              <p>Aquí irán las fotos y clips reales del laboratorio cuando los tengas listos.</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="contacto" class="contact-section">
+      <div class="contact-card">
+        <h3>Contacto</h3>
+        <div class="contact-lines">
+          <a href="mailto:contacto@alunexatienda.com">contacto@alunexatienda.com</a>
+          <span>Mendoza 7279, Rosario, Santa Fe, Argentina.</span>
+          <a href="tel:+5493417553252">+54 9 341 755-3252</a>
+          <a href="tel:+5493415643311">+54 9 341 564-3311</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid" style="grid-template-columns:1.2fr 1fr;">
+        <div class="footer-brand">
+          <div class="brand">
+            <img class="brand-logo" src="assets/logo-alunexa.svg" alt="Logo Alunexa">
+            <div class="brand-name">ALUNEXA</div>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <div class="footer-links">
+            <a href="mailto:contacto@alunexatienda.com">contacto@alunexatienda.com</a>
+            <span>Mendoza 7279, Rosario</span>
+            <a href="tel:+5493417553252">+54 9 341 755-3252</a>
+            <a href="tel:+5493415643311">+54 9 341 564-3311</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Alunexa. Todos los derechos reservados.</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
