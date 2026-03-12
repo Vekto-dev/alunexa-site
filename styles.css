@@ -347,6 +347,15 @@ button{font:inherit}
 .hero-dots{
   pointer-events:auto;
 }
+.hero-dots-bottom{
+  position:absolute;
+  right:18px;
+  bottom:16px;
+  top:auto;
+  transform:none;
+  flex-direction:row;
+  gap:8px;
+}
 .hero-nav{
   position:absolute;
   inset:0;
@@ -562,6 +571,11 @@ rgba(255,253,249,.6);
   margin:0;
   color:var(--muted);
 }
+.science-section{
+  background:rgba(255,253,249,0.44);
+  border-top:1px solid rgba(231,223,212,0.95);
+  border-bottom:1px solid rgba(231,223,212,0.95);
+}
 
 .about-wrap{
   grid-template-columns:1fr 1fr;
@@ -595,6 +609,13 @@ rgba(255,253,249,.6);
   min-height:420px;
   position:relative;
   background:linear-gradient(135deg, #f8f4ed 0%, #ebe2d6 100%);
+}
+.about-layout{
+  min-height:360px;
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  align-items:stretch;
+  overflow:hidden;
 }
 .lab-stage{position:absolute;inset:0}
 .lab-panel{
