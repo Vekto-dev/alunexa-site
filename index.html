@@ -11,24 +11,56 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#inicio" class="brand" aria-label="Alunexa inicio">
-        <img class="brand-logo" src="assets/logo-alunexa.svg" alt="Logo Alunexa">
-        <div class="brand-name">ALUNEXA</div>
-      </a>
+ <header class="site-header">
 
-      <nav class="nav" aria-label="Principal">
-  <a href="#inicio">Inicio</a>
-  <a href="tienda.html">Tienda</a>
-  <a href="#areas">Áreas de salud</a>
-  <a href="#ciencia">La ciencia</a>
-  <a href="sobre-alunexa.html">Sobre Alunexa</a>
-  <a href="sobre-alunexa.html#contacto">Contacto</a>
-</nav>
+  <div class="container header-inner">
 
-    </div>
-  </header>
+    <a href="#inicio" class="brand" aria-label="Alunexa inicio">
+      <img class="brand-logo" src="assets/logo-alunexa.svg" alt="Logo Alunexa">
+      <div class="brand-name">ALUNEXA</div>
+    </a>
+
+    <nav class="nav" aria-label="Principal">
+      <a href="#inicio">Inicio</a>
+      <a href="tienda.html">Tienda</a>
+      <a href="#areas">Áreas de salud</a>
+      <a href="#ciencia">La ciencia</a>
+      <a href="sobre-alunexa.html">Sobre Alunexa</a>
+      <a href="sobre-alunexa.html#contacto">Contacto</a>
+    </nav>
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+      aria-controls="mobileMenu">
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+  </div>
+
+  <!-- MENÚ MOBILE -->
+  <div class="mobile-menu" id="mobileMenu">
+
+    <nav class="mobile-nav" aria-label="Menú móvil">
+
+      <a href="#inicio">Inicio</a>
+      <a href="tienda.html">Tienda</a>
+      <a href="#areas">Áreas de salud</a>
+      <a href="#ciencia">La ciencia</a>
+      <a href="sobre-alunexa.html">Sobre Alunexa</a>
+      <a href="sobre-alunexa.html#contacto">Contacto</a>
+
+    </nav>
+
+  </div>
+
+</header>
 
   <main id="inicio">
     <div class="hero-wrap container">

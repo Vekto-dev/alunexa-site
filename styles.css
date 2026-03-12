@@ -778,7 +778,7 @@ grid-template-columns:auto 1fr;
 .hero-arrow{
   transition:all .22s ease;
 }
-:focus-visible{
-  outline:2px solid var(--gold);
-  outline-offset:2px;
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
 }
