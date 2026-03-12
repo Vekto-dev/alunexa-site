@@ -12,7 +12,6 @@
 </head>
 <body>
  <header class="site-header">
-
   <div class="container header-inner">
 
     <a href="#inicio" class="brand" aria-label="Alunexa inicio">
@@ -29,8 +28,7 @@
       <a href="sobre-alunexa.html#contacto">Contacto</a>
     </nav>
 
-    <button
-      class="menu-toggle"
+    <button class="menu-toggle"
       id="menuToggle"
       aria-label="Abrir menú"
       aria-expanded="false"
@@ -43,23 +41,6 @@
     </button>
 
   </div>
-
-  <!-- MENÚ MOBILE -->
-  <div class="mobile-menu" id="mobileMenu">
-
-    <nav class="mobile-nav" aria-label="Menú móvil">
-
-      <a href="#inicio">Inicio</a>
-      <a href="tienda.html">Tienda</a>
-      <a href="#areas">Áreas de salud</a>
-      <a href="#ciencia">La ciencia</a>
-      <a href="sobre-alunexa.html">Sobre Alunexa</a>
-      <a href="sobre-alunexa.html#contacto">Contacto</a>
-
-    </nav>
-
-  </div>
-
 </header>
 
   <main id="inicio">
@@ -80,13 +61,14 @@
               <div class="abstract seed"></div>
               <div class="abstract almond" style="right:auto; left:38%; top:24px; width:160px; height:150px; opacity:.12;"></div>
               <div class="abstract turmeric"></div>
-              <div class="hero-products" style="gap:12px; align-items:center; justify-content:center; padding:24px;">
+              <div class="hero-products hero-products-mag"> style="gap:12px; align-items:center; justify-content:center; padding:24px;">
                 <img src="assets/bisglicinato-magnesio.png" alt="Bisglicinato de Magnesio" style="width:min(31%, 270px); height:auto; object-fit:contain; filter:drop-shadow(0 20px 28px rgba(17,17,17,.16));">
                 <img src="assets/citrato-magnesio.png" alt="Citrato de Magnesio" style="width:min(31%, 270px); height:auto; object-fit:contain; filter:drop-shadow(0 20px 28px rgba(17,17,17,.16));">
                 <img src="assets/multimagnesio.png" alt="Multimagnesio" style="width:min(31%, 270px); height:auto; object-fit:contain; filter:drop-shadow(0 20px 28px rgba(17,17,17,.16));">
               </div>
             </div>
           </article>
+          
 
           <article class="hero-panel">
             <div class="hero-copy">
@@ -101,7 +83,7 @@
             <div class="hero-visual" aria-hidden="true">
               <div class="abstract b12leaf"></div>
               <div class="texture texture-a"></div>
-              <div class="hero-products" style="justify-content:flex-end; padding-right:58px; align-items:center;">
+              <div class="hero-products hero-products-b12"> style="justify-content:flex-end; padding-right:58px; align-items:center;">
                 <img src="assets/vitamina-b12.png" alt="Vitamina B12" style="width:min(66%, 460px); height:auto; object-fit:contain; filter:drop-shadow(0 22px 30px rgba(17,17,17,.18));">
               </div>
             </div>
@@ -121,7 +103,7 @@
               <div class="abstract orange"></div>
               <div class="abstract oil" style="right:auto; left:44%; bottom:22px; top:auto; opacity:.12;"></div>
               <div class="texture texture-b"></div>
-              <div class="hero-products" style="justify-content:flex-end; padding-right:68px; align-items:center;">
+              <div class="hero-products hero-products-nad"> style="justify-content:flex-end; padding-right:68px; align-items:center;">
                 <div style="width:min(60%, 410px); min-height:250px; border-radius:24px; border:1px solid rgba(231,223,212,.9); background:linear-gradient(135deg, rgba(255,255,255,.88), rgba(255,255,255,.62)); box-shadow:0 22px 34px rgba(17,17,17,.08); display:grid; place-items:center; text-align:center; padding:28px;">
                   <div>
                     <div style="font-size:.78rem; letter-spacing:.18em; text-transform:uppercase; color:var(--green-deep); font-weight:700; margin-bottom:10px;">Próximamente</div>
@@ -139,7 +121,7 @@
             <button class="hero-arrow" id="heroPrev" aria-label="Slide anterior">←</button>
             <button class="hero-arrow" id="heroNext" aria-label="Slide siguiente">→</button>
           </div>
-          <div class="hero-dots" id="heroDots" aria-label="Indicadores de slide" 
+          <div class="hero-dots hero-dots-bottom" id="heroDots" aria-label="Indicadores de slide"> 
             <button class="hero-dot active" data-slide="0" aria-label="Ir al slide 1"></button>
             <button class="hero-dot" data-slide="1" aria-label="Ir al slide 2"></button>
             <button class="hero-dot" data-slide="2" aria-label="Ir al slide 3"></button>
@@ -218,8 +200,8 @@
 
     <section id="sobre" class="section about-section">
       <div class="container">
-        <div class="about-media about-layout"> aria-hidden="true" style="min-height:360px; display:grid; grid-template-columns:1.1fr .9fr; align-items:stretch; overflow:hidden;">
-          <div class="about-copy" style="border:none; box-shadow:none; background:transparent; border-radius:0; padding:52px 46px;">
+        <div class="about-media about-layout" aria-hidden="true"> style="min-height:360px; display:grid; grid-template-columns:1.1fr .9fr; align-items:stretch; overflow:hidden;">
+          <div class="about-copy about-copy-hero"> style="border:none; box-shadow:none; background:transparent; border-radius:0; padding:52px 46px;">
             <h2 class="heading-serif" style="font-size:clamp(2rem,3.4vw,3.4rem);">Sobre Alunexa</h2>
             <p style="max-width:34ch;">Ciencia y naturaleza como ideal.</p>
             <div>

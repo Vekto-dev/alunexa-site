@@ -264,6 +264,23 @@ button{font:inherit}
   z-index:2;
 }
 
+.hero-products-mag{
+  gap:12px;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+.hero-products-b12{
+  justify-content:flex-end;
+  padding-right:58px;
+  align-items:center;
+}
+.hero-products-nad{
+  justify-content:flex-end;
+  padding-right:68px;
+  align-items:center;
+}
+
 .texture,
 .abstract{
   position:absolute;
@@ -617,6 +634,14 @@ rgba(255,253,249,.6);
   align-items:stretch;
   overflow:hidden;
 }
+.about-copy-hero{
+  border:none;
+  box-shadow:none;
+  background:transparent;
+  border-radius:0;
+  padding:52px 46px;
+}
+
 .lab-stage{position:absolute;inset:0}
 .lab-panel{
   position:absolute;
