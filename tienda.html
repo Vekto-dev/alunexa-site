@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tienda Alunexa</title>
-<link rel="icon" href="assets/logo-alunexa.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Noto+Serif:wght@400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda Alunexa</title>
+  <meta name="description" content="Explora la línea de productos Alunexa. Suplementos formulados con criterio, ciencia y naturaleza para el bienestar cotidiano.">
 
-<link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/logo-alunexa.svg" type="image/svg+xml">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600&family=Noto+Serif:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
 <style>
 
 .page-header{
   padding:130px 0 76px;
-  text-align:center;
+  text-align:center; 
 }
 
 .page-header h1{
@@ -132,99 +136,153 @@
 <body>
 
 <header class="site-header">
-<div class="container header-inner">
+  <div class="container header-inner">
+    <a href="index.html" class="brand" aria-label="Alunexa inicio">
+      <img class="brand-logo" src="assets/logo-alunexa.svg" alt="Logo Alunexa">
+      <div class="brand-name">ALUNEXA</div>
+    </a>
 
-<a href="index.html" class="brand">
-<img class="brand-logo" src="assets/logo-alunexa.svg">
-<div class="brand-name">ALUNEXA</div>
-</a>
+    <nav class="nav" aria-label="Principal">
+      <a href="index.html">Inicio</a>
+      <a href="tienda.html">Tienda</a>
+      <a href="index.html#areas">Áreas de salud</a>
+      <a href="ciencia.html">La ciencia</a>
+      <a href="sobre-alunexa.html">Sobre Alunexa</a>
+      <a href="sobre-alunexa.html#contacto">Contacto</a>
+    </nav>
 
-<nav class="nav" aria-label="Principal">
-  <a href="index.html">Inicio</a>
-  <a href="tienda.html">Tienda</a>
-  <a href="index.html#areas">Áreas de salud</a>
-  <a href="index.html#ciencia">La ciencia</a>
-  <a href="sobre-alunexa.html">Sobre Alunexa</a>
-  <a href="sobre-alunexa.html#contacto">Contacto</a>
-</nav>
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+      aria-controls="mobileMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
 
-</div>
+  <div class="mobile-menu" id="mobileMenu">
+    <nav class="mobile-nav" aria-label="Menú móvil">
+      <a href="index.html">Inicio</a>
+      <a href="tienda.html">Tienda</a>
+      <a href="index.html#areas">Áreas de salud</a>
+      <a href="ciencia.html">La ciencia</a>
+      <a href="sobre-alunexa.html">Sobre Alunexa</a>
+      <a href="sobre-alunexa.html#contacto">Contacto</a>
+    </nav>
+  </div>
 </header>
 
-<section class="page-header">
+<main>
+  <section class="page-header">
+    <div class="container">
+      <h1>Nuestra línea</h1>
+      <p>Suplementos formulados con criterio y equilibrio.</p>
+    </div>
+  </section>
 
-<h1>Nuestra línea</h1>
+  <section class="catalog-section" aria-labelledby="catalogo-title">
+    <div class="container">
+      <h2 id="catalogo-title" class="sr-only">Catálogo de productos</h2>
 
-<p>Suplementos formulados con criterio y equilibrio.</p>
+      <div class="catalog">
 
+        <div class="product-card">
+          <img src="assets/bisglicinato-magnesio.png" alt="Bisglicinato de Magnesio">
+          <h3>Bisglicinato de Magnesio</h3>
+          <p>Alta biodisponibilidad para relajación muscular y equilibrio del sistema nervioso.</p>
+          <a class="buy-btn" href="#">Comprar</a>
+        </div>
+
+        <div class="product-card">
+          <img src="assets/citrato-magnesio.png" alt="Citrato de Magnesio">
+          <h3>Citrato de Magnesio</h3>
+          <p>Equilibrio muscular, nervioso y digestivo para uso cotidiano.</p>
+          <a class="buy-btn" href="#">Comprar</a>
+        </div>
+
+        <div class="product-card">
+          <img src="assets/multimagnesio.png" alt="Multimagnesio">
+          <h3>Multimagnesio</h3>
+          <p>Fórmula equilibrada con cinco formas de magnesio.</p>
+          <a class="buy-btn" href="#">Comprar</a>
+        </div>
+
+        <div class="product-card">
+          <img src="assets/magnesio.png" alt="Magnesio">
+          <h3>Magnesio</h3>
+          <p>Alivio digestivo, relajación y bienestar para acompañar el uso diario.</p>
+          <a class="buy-btn" href="#">Comprar</a>
+        </div>
+
+        <div class="product-card">
+          <img src="assets/calcio-magnesio-vitd3.png" alt="Calcio Magnesio y Vitamina D3">
+          <h3>Calcio, Magnesio y Vitamina D3</h3>
+          <p>Soporte para salud ósea y muscular con vitamina D3.</p>
+          <a class="buy-btn" href="#">Comprar</a>
+        </div>
+
+        <div class="product-card">
+          <img src="assets/vitamina-c-zinc-d3.png" alt="Vitamina C Zinc y Vitamina D">
+          <h3>Vitamina C, Zinc y Vitamina D</h3>
+          <p>Soporte inmunológico con zinc quelado y acción antioxidante.</p>
+          <a class="buy-btn" href="#">Comprar</a>
+        </div>
+
+        <div class="product-card">
+          <img src="assets/vitamina-b12.png" alt="Vitamina B12">
+          <h3>Vitamina B12</h3>
+          <p>Energía diaria, función neurológica y equilibrio metabólico.</p>
+          <a class="buy-btn" href="#">Comprar</a>
+        </div>
+
+        <div class="product-card">
+          <img src="assets/colageno-hidrolizado-vitamina-e.png" alt="Colágeno Hidrolizado y Vitamina E">
+          <h3>Colágeno Hidrolizado y Vitamina E</h3>
+          <p>Contribuye al cuidado de la piel, uñas y articulaciones.</p>
+          <a class="buy-btn" href="#">Comprar</a>
+        </div>
+
+        <div class="product-card">
+          <img src="assets/resveratrol.png" alt="Resveratrol">
+          <h3>Resveratrol</h3>
+          <p>Apoya la salud celular y la longevidad con perfil antioxidante.</p>
+          <a class="buy-btn" href="#">Comprar</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
 </section>
-
-<section class="catalog">
-
-  <div class="product-card">
-    <img src="assets/bisglicinato-magnesio.png" alt="Bisglicinato de Magnesio">
-    <h3>Bisglicinato de Magnesio</h3>
-    <p>Alta biodisponibilidad para relajación muscular y equilibrio del sistema nervioso.</p>
-    <a class="buy-btn" href="#">Comprar</a>
-  </div>
-
-  <div class="product-card">
-    <img src="assets/citrato-magnesio.png" alt="Citrato de Magnesio">
-    <h3>Citrato de Magnesio</h3>
-    <p>Equilibrio muscular, nervioso y digestivo para uso cotidiano.</p>
-    <a class="buy-btn" href="#">Comprar</a>
-  </div>
-
-  <div class="product-card">
-    <img src="assets/multimagnesio.png" alt="Multimagnesio">
-    <h3>Multimagnesio</h3>
-    <p>Fórmula equilibrada con cinco formas de magnesio.</p>
-    <a class="buy-btn" href="#">Comprar</a>
-  </div>
-
-  <div class="product-card">
-    <img src="assets/magnesio.png" alt="Magnesio">
-    <h3>Magnesio</h3>
-    <p>Alivio digestivo, relajación y bienestar para acompañar el uso diario.</p>
-    <a class="buy-btn" href="#">Comprar</a>
-  </div>
-
-  <div class="product-card">
-    <img src="assets/calcio-magnesio-vitd3.png" alt="Calcio Magnesio y Vitamina D3">
-    <h3>Calcio, Magnesio y Vitamina D3</h3>
-    <p>Soporte para salud ósea y muscular con vitamina D3.</p>
-    <a class="buy-btn" href="#">Comprar</a>
-  </div>
-
-  <div class="product-card">
-    <img src="assets/vitamina-c-zinc-d3.png" alt="Vitamina C Zinc y Vitamina D">
-    <h3>Vitamina C, Zinc y Vitamina D</h3>
-    <p>Soporte inmunológico con zinc quelado y acción antioxidante.</p>
-    <a class="buy-btn" href="#">Comprar</a>
-  </div>
-
-  <div class="product-card">
-    <img src="assets/vitamina-b12.png" alt="Vitamina B12">
-    <h3>Vitamina B12</h3>
-    <p>Energía diaria, función neurológica y equilibrio metabólico.</p>
-    <a class="buy-btn" href="#">Comprar</a>
-  </div>
-
-  <div class="product-card">
-    <img src="assets/colageno-hidrolizado-vitamina-e.png" alt="Colágeno Hidrolizado y Vitamina E">
-    <h3>Colágeno Hidrolizado y Vitamina E</h3>
-    <p>Contribuye al cuidado de la piel, uñas y articulaciones.</p>
-    <a class="buy-btn" href="#">Comprar</a>
-  </div>
-
-  <div class="product-card">
-    <img src="assets/resveratrol.png" alt="Resveratrol">
-    <h3>Resveratrol</h3>
-    <p>Apoya la salud celular y la longevidad con perfil antioxidante.</p>
-    <a class="buy-btn" href="#">Comprar</a>
-  </div>
-
-</section>
-
+<script src="script.js"></script>
 </body>
 </html>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid footer-grid-2">
+      <div class="footer-brand">
+        <div class="brand">
+          <img class="brand-logo" src="assets/logo-alunexa.svg" alt="Logo Alunexa">
+          <div class="brand-name">ALUNEXA</div>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <div class="footer-links">
+          <a href="mailto:contacto@alunexatienda.com">contacto@alunexatienda.com</a>
+          <span>Mendoza 7279, Rosario</span>
+          <a href="tel:+5493417553252">+54 9 341 755-3252</a>
+          <a href="tel:+5493415643311">+54 9 341 564-3311</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Alunexa. Todos los derechos reservados.</span>
+    </div>
+  </div>
+</footer>
