@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">Producto — Alunexa</title>
+  <meta id="page-desc" name="description" content="Suplementos formulados con criterio. Ciencia y naturaleza para el bienestar cotidiano.">
+  <meta property="og:site_name" content="Alunexa">
+  <meta property="og:locale" content="es_AR">
+  <link rel="icon" href="assets/logo-alunexa.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600&family=Noto+Serif:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .product-page { padding: 120px 0 90px; }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .88rem;
+      color: var(--muted);
+      margin-bottom: 40px;
+    }
+    .breadcrumb a { color: var(--muted); transition: color .2s; }
+    .breadcrumb a:hover { color: var(--text); }
+    .breadcrumb span { opacity: .5; }
+
+    .product-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .product-img-card {
+      background: rgba(255,253,250,.92);
+      border: 1px solid rgba(231,223,212,.95);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 16px 28px rgba(17,17,17,.05);
+      aspect-ratio: 1 / 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      position: sticky;
+      top: 100px;
+    }
+
+    .product-img-card img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: contain;
+      filter: drop-shadow(0 20px 28px rgba(17,17,17,.14));
+    }
+
+    .product-info { display: flex; flex-direction: column; gap: 28px; }
+
+    .product-tag {
+      font-size: .82rem;
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-weight: 700;
+      color: var(--green-deep);
+    }
+
+    .product-name {
+      font-family: "Noto Serif", serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      line-height: 1.1;
+      margin: 0;
+      color: var(--text);
+    }
+
+    .product-tagline {
+      font-size: 1.08rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin: 0;
+      max-width: 40ch;
+    }
+
+    .product-divider {
+      height: 1px;
+      background: rgba(231,223,212,.9);
+    }
+
+    .product-benefits {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .product-benefits h3 {
+      font-size: .82rem;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-weight: 700;
+      color: var(--green-deep);
+      margin: 0 0 4px;
+    }
+
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: .98rem;
+      color: #3a352f;
+      line-height: 1.5;
+    }
+
+    .benefit-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+      margin-top: 7px;
+    }
+
+    .product-detail-block {
+      background: rgba(255,253,250,.92);
+      border: 1px solid rgba(231,223,212,.95);
+      border-radius: 20px;
+      padding: 22px 24px;
+    }
+
+    .product-detail-block h3 {
+      font-size: .82rem;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-weight: 700;
+      color: var(--green-deep);
+      margin: 0 0 10px;
+    }
+
+    .product-detail-block p {
+      font-size: .96rem;
+      color: var(--muted);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    .buy-area {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .btn-buy-main {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 28px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #e0c26d 0%, var(--gold) 100%);
+      color: #2f2617;
+      font-weight: 700;
+      font-size: 1rem;
+      box-shadow: 0 12px 22px rgba(214,177,90,.24);
+      transition: all .22s ease;
+      cursor: pointer;
+      border: none;
+      text-align: center;
+    }
+
+    .btn-buy-main:hover { transform: translateY(-2px); box-shadow: 0 16px 28px rgba(214,177,90,.3); }
+
+    .btn-wa {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 44px;
+      padding: 0 22px;
+      border-radius: 999px;
+      border: 1px solid rgba(231,223,212,.9);
+      background: rgba(255,253,250,.9);
+      color: var(--muted);
+      font-size: .92rem;
+      font-weight: 600;
+      transition: all .22s ease;
+    }
+
+    .btn-wa:hover { border-color: rgba(67,120,72,.3); color: var(--green-deep); }
+
+    .not-found {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    @media (max-width: 860px) {
+      .product-layout { grid-template-columns: 1fr; gap: 32px; }
+      .product-img-card { position: static; aspect-ratio: auto; min-height: 300px; }
+    }
+
+    @media (max-width: 640px) {
+      .product-page { padding: 100px 0 70px; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="sr-only">Saltar al contenido principal</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Alunexa inicio">
+        <img class="brand-logo" src="assets/logo-alunexa.svg" alt="Logo Alunexa">
+        <div class="brand-name">ALUNEXA</div>
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="index.html">Inicio</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="index.html#areas">Áreas de salud</a>
+        <a href="ciencia.html">La ciencia</a>
+        <a href="sobre-alunexa.html">Sobre Alunexa</a>
+        <a href="sobre-alunexa.html#contacto">Contacto</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <nav class="mobile-nav" aria-label="Menú móvil">
+        <a href="index.html">Inicio</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="index.html#areas">Áreas de salud</a>
+        <a href="ciencia.html">La ciencia</a>
+        <a href="sobre-alunexa.html">Sobre Alunexa</a>
+        <a href="sobre-alunexa.html#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="product-page">
+    <div class="container" id="product-container">
+      <!-- Se carga por JS -->
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid footer-grid-2">
+        <div class="footer-brand">
+          <div class="brand">
+            <img class="brand-logo" src="assets/logo-alunexa.svg" alt="Logo Alunexa" loading="lazy">
+            <div class="brand-name">ALUNEXA</div>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <div class="footer-links">
+            <a href="mailto:contacto@alunexatienda.com">contacto@alunexatienda.com</a>
+            <span>Mendoza 7279, Rosario</span>
+            <a href="tel:+5493417553252">+54 9 341 755-3252</a>
+            <a href="tel:+5493415643311">+54 9 341 564-3311</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Alunexa. Todos los derechos reservados.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script>
+    const PRODUCTS = {
+      'bisglicinato-magnesio': {
+        name: 'Bisglicinato de Magnesio',
+        tag: 'Magnesio · Alta biodisponibilidad',
+        tagline: 'Forma de magnesio con alta biodisponibilidad, ideal para la relajación muscular y el equilibrio del sistema nervioso.',
+        image: 'assets/bisglicinato-magnesio.png',
+        benefits: [
+          'Alta absorción intestinal gracias al quelato de glicina',
+          'Apoya la relajación muscular y reduce calambres',
+          'Contribuye al equilibrio del sistema nervioso',
+          'Buena tolerancia digestiva',
+          'Apto para uso cotidiano'
+        ],
+        ingredients: 'Bisglicinato de Magnesio (Mg quelado con glicina). Excipientes: celulosa microcristalina, estearato de magnesio vegetal.',
+        usage: 'Tomar según las indicaciones del rótulo. Consultar a un profesional de la salud ante cualquier duda.',
+        wa: 'https://wa.me/5493417553252?text=Hola!%20Me%20interesa%20el%20Bisglicinato%20de%20Magnesio%20Alunexa.'
+      },
+      'citrato-magnesio': {
+        name: 'Citrato de Magnesio',
+        tag: 'Magnesio · Equilibrio digestivo',
+        tagline: 'Equilibrio muscular, nervioso y digestivo para el uso cotidiano.',
+        image: 'assets/citrato-magnesio.png',
+        benefits: [
+          'Apoya la función muscular y nerviosa',
+          'Contribuye al tránsito digestivo saludable',
+          'Buena biodisponibilidad',
+          'Apto para uso diario',
+          'Suave para el estómago'
+        ],
+        ingredients: 'Citrato de Magnesio. Excipientes: celulosa microcristalina, estearato de magnesio vegetal.',
+        usage: 'Tomar según las indicaciones del rótulo. Consultar a un profesional de la salud ante cualquier duda.',
+        wa: 'https://wa.me/5493417553252?text=Hola!%20Me%20interesa%20el%20Citrato%20de%20Magnesio%20Alunexa.'
+      },
+      'multimagnesio': {
+        name: 'Multimagnesio',
+        tag: 'Magnesio · Fórmula completa',
+        tagline: 'Fórmula equilibrada con cinco formas de magnesio para una cobertura integral.',
+        image: 'assets/multimagnesio.png',
+        benefits: [
+          'Combina cinco formas de magnesio de alta calidad',
+          'Absorción optimizada por vías múltiples',
+          'Apoya el sistema muscular, nervioso y energético',
+          'Ideal para quienes buscan una cobertura completa',
+          'Fórmula basada en evidencia clínica'
+        ],
+        ingredients: 'Mezcla de magnesio: bisglicinato, citrato, malato, taurato y óxido. Excipientes: celulosa microcristalina, estearato de magnesio vegetal.',
+        usage: 'Tomar según las indicaciones del rótulo. Consultar a un profesional de la salud ante cualquier duda.',
+        wa: 'https://wa.me/5493417553252?text=Hola!%20Me%20interesa%20el%20Multimagnesio%20Alunexa.'
+      },
+      'magnesio': {
+        name: 'Magnesio',
+        tag: 'Magnesio · Uso diario',
+        tagline: 'Alivio digestivo, relajación y bienestar para acompañar el uso diario.',
+        image: 'assets/magnesio.png',
+        benefits: [
+          'Contribuye al bienestar general cotidiano',
+          'Apoya la relajación muscular',
+          'Apto para uso continuo',
+          'Formato accesible y práctico',
+          'Base sólida de suplementación con magnesio'
+        ],
+        ingredients: 'Magnesio (óxido de magnesio). Excipientes: celulosa microcristalina, estearato de magnesio vegetal.',
+        usage: 'Tomar según las indicaciones del rótulo. Consultar a un profesional de la salud ante cualquier duda.',
+        wa: 'https://wa.me/5493417553252?text=Hola!%20Me%20interesa%20el%20Magnesio%20Alunexa.'
+      },
+      'calcio-magnesio-vitd3': {
+        name: 'Calcio, Magnesio y Vitamina D3',
+        tag: 'Huesos · Soporte estructural',
+        tagline: 'Soporte integral para la salud ósea y muscular con vitamina D3 de alta potencia.',
+        image: 'assets/calcio-magnesio-vitd3.png',
+        benefits: [
+          'Contribuye a la densidad y resistencia ósea',
+          'La vitamina D3 optimiza la absorción de calcio',
+          'Apoya la función muscular y nerviosa',
+          'Fórmula pensada para la salud estructural a largo plazo',
+          'Ideal para adultos con mayor demanda de calcio'
+        ],
+        ingredients: 'Carbonato de Calcio, Citrato de Magnesio, Vitamina D3 (colecalciferol). Excipientes: celulosa microcristalina, estearato de magnesio vegetal.',
+        usage: 'Tomar según las indicaciones del rótulo. Consultar a un profesional de la salud ante cualquier duda.',
+        wa: 'https://wa.me/5493417553252?text=Hola!%20Me%20interesa%20Calcio%2C%20Magnesio%20y%20Vitamina%20D3%20Alunexa.'
+      },
+      'vitamina-c-zinc': {
+        name: 'Vitamina C, Zinc y Vitamina D',
+        tag: 'Defensas · Soporte inmunológico',
+        tagline: 'Soporte inmunológico con zinc quelado, vitamina C y vitamina D para defensas activas.',
+        image: 'assets/vitamina-c-zinc-d3.png',
+        benefits: [
+          'Vitamina C con acción antioxidante y soporte inmune',
+          'Zinc quelado de alta biodisponibilidad',
+          'Vitamina D3 para modular la respuesta inmunológica',
+          'Combinación sinérgica respaldada por evidencia',
+          'Ideal para períodos de mayor exigencia para el sistema inmune'
+        ],
+        ingredients: 'Ácido Ascórbico (Vitamina C), Bisglicinato de Zinc, Vitamina D3 (colecalciferol). Excipientes: celulosa microcristalina, estearato de magnesio vegetal.',
+        usage: 'Tomar según las indicaciones del rótulo. Consultar a un profesional de la salud ante cualquier duda.',
+        wa: 'https://wa.me/5493417553252?text=Hola!%20Me%20interesa%20Vitamina%20C%2C%20Zinc%20y%20Vitamina%20D%20Alunexa.'
+      },
+      'vitamina-b12': {
+        name: 'Vitamina B12',
+        tag: 'Energía · Sistema nervioso',
+        tagline: 'Energía diaria, función neurológica y equilibrio metabólico con metilcobalamina.',
+        image: 'assets/vitamina-b12.png',
+        benefits: [
+          'Metilcobalamina: forma activa de mayor biodisponibilidad',
+          'Apoya la producción de energía celular',
+          'Contribuye al correcto funcionamiento del sistema nervioso',
+          'Participa en la formación de glóbulos rojos',
+          'Especialmente recomendada para dietas vegetarianas o veganas'
+        ],
+        ingredients: 'Metilcobalamina (Vitamina B12). Excipientes: celulosa microcristalina, estearato de magnesio vegetal.',
+        usage: 'Tomar según las indicaciones del rótulo. Consultar a un profesional de la salud ante cualquier duda.',
+        wa: 'https://wa.me/5493417553252?text=Hola!%20Me%20interesa%20la%20Vitamina%20B12%20Alunexa.'
+      },
+      'colageno-hidrolizado': {
+        name: 'Colágeno Hidrolizado y Vitamina E',
+        tag: 'Nutricosmética · Piel y articulaciones',
+        tagline: 'Contribuye al cuidado de la piel, uñas y articulaciones con colágeno hidrolizado y vitamina E.',
+        image: 'assets/colageno-hidrolizado-vitamina-e.png',
+        benefits: [
+          'Colágeno hidrolizado de rápida absorción',
+          'Vitamina E con acción antioxidante sobre la piel',
+          'Apoya la elasticidad y firmeza cutánea',
+          'Contribuye a la salud de uñas y cabello',
+          'Soporte articular para el movimiento cotidiano'
+        ],
+        ingredients: 'Colágeno Hidrolizado (péptidos de colágeno), Vitamina E (tocoferol). Excipientes: celulosa microcristalina, estearato de magnesio vegetal.',
+        usage: 'Tomar según las indicaciones del rótulo. Consultar a un profesional de la salud ante cualquier duda.',
+        wa: 'https://wa.me/5493417553252?text=Hola!%20Me%20interesa%20el%20Col%C3%A1geno%20Hidrolizado%20con%20Vitamina%20E%20Alunexa.'
+      },
+      'resveratrol': {
+        name: 'Resveratrol',
+        tag: 'Longevidad · Salud celular',
+        tagline: 'Apoya la salud celular y la longevidad con un perfil antioxidante de alto espectro.',
+        image: 'assets/resveratrol.png',
+        benefits: [
+          'Potente acción antioxidante a nivel celular',
+          'Apoya los mecanismos de longevidad y salud metabólica',
+          'Contribuye a la salud cardiovascular',
+          'Extracto estandarizado de alta concentración',
+          'Basado en investigación sobre compuestos de longevidad'
+        ],
+        ingredients: 'Resveratrol (extracto de Polygonum cuspidatum estandarizado). Excipientes: celulosa microcristalina, estearato de magnesio vegetal.',
+        usage: 'Tomar según las indicaciones del rótulo. Consultar a un profesional de la salud ante cualquier duda.',
+        wa: 'https://wa.me/5493417553252?text=Hola!%20Me%20interesa%20el%20Resveratrol%20Alunexa.'
+      }
+    };
+
+    function renderProduct(id) {
+      const container = document.getElementById('product-container');
+      const p = PRODUCTS[id];
+
+      if (!p) {
+        container.innerHTML = `
+          <div class="not-found">
+            <p style="color:var(--muted);margin-bottom:20px">Producto no encontrado.</p>
+            <a class="btn" href="tienda.html">Ver todos los productos</a>
+          </div>`;
+        return;
+      }
+
+      document.getElementById('page-title').textContent = `${p.name} — Alunexa`;
+      document.getElementById('page-desc').setAttribute('content', p.tagline);
+
+      const benefitsHTML = p.benefits.map(b =>
+        `<div class="benefit-item"><div class="benefit-dot"></div><span>${b}</span></div>`
+      ).join('');
+
+      container.innerHTML = `
+        <nav class="breadcrumb" aria-label="Ubicación">
+          <a href="tienda.html">Tienda</a>
+          <span>›</span>
+          <span>${p.name}</span>
+        </nav>
+
+        <div class="product-layout">
+          <div class="product-img-card">
+            <img src="${p.image}" alt="${p.name}">
+          </div>
+
+          <div class="product-info">
+            <div>
+              <div class="product-tag">${p.tag}</div>
+            </div>
+
+            <h1 class="product-name heading-serif">${p.name}</h1>
+            <p class="product-tagline">${p.tagline}</p>
+
+            <div class="product-divider"></div>
+
+            <div class="product-benefits">
+              <h3>Beneficios</h3>
+              ${benefitsHTML}
+            </div>
+
+            <div class="product-divider"></div>
+
+            <div class="product-detail-block">
+              <h3>Ingredientes</h3>
+              <p>${p.ingredients}</p>
+            </div>
+
+            <div class="product-detail-block">
+              <h3>Modo de uso</h3>
+              <p>${p.usage}</p>
+            </div>
+
+            <div class="buy-area">
+              <button class="btn-buy-main" disabled style="opacity:.5;cursor:not-allowed;">
+                Comprar — Próximamente
+              </button>
+              <a class="btn-wa" href="${p.wa}" target="_blank" rel="noopener">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Consultar por WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    renderProduct(id);
+  </script>
+</body>
+</html>
