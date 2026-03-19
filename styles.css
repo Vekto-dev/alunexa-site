@@ -323,14 +323,6 @@ button{font:inherit}
   filter:drop-shadow(0 20px 28px rgba(17,17,17,.16));
 }
 
-.hero-bottle-familia{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center;
-}
 
 .hero-bottle-b12{
   width:min(66%, 460px);
