@@ -8,6 +8,16 @@
 <title>La ciencia detrás de nuestros productos</title>
 
 <meta name="description" content="Información clara y basada en evidencia sobre los compuestos presentes en los productos Alunexa.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://alunexa-site.vercel.app/ciencia.html">
+<meta property="og:title" content="La ciencia detrás de nuestros productos — Alunexa">
+<meta property="og:description" content="Información clara y basada en evidencia sobre los compuestos presentes en los productos Alunexa.">
+<meta property="og:image" content="https://alunexa-site.vercel.app/assets/logo-alunexa.svg">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Alunexa">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="La ciencia detrás de nuestros productos — Alunexa">
+<meta name="twitter:description" content="Información clara y basada en evidencia sobre los compuestos presentes en los productos Alunexa.">
 <link rel="icon" href="assets/logo-alunexa.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -83,32 +93,52 @@ grid-template-columns:1fr;
 </head>
 
 <body>
+<a href="#main" class="sr-only">Saltar al contenido principal</a>
 
 <header class="site-header">
-
 <div class="container header-inner">
 
-<a href="index.html" class="brand">
+<a href="index.html" class="brand" aria-label="Alunexa inicio">
 <img class="brand-logo" src="assets/logo-alunexa.svg" alt="Logo Alunexa">
 <div class="brand-name">ALUNEXA</div>
 </a>
 
 <nav class="nav" aria-label="Principal">
-
 <a href="index.html">Inicio</a>
 <a href="tienda.html">Tienda</a>
 <a href="index.html#areas">Áreas de salud</a>
 <a href="ciencia.html">La ciencia</a>
 <a href="sobre-alunexa.html">Sobre Alunexa</a>
 <a href="sobre-alunexa.html#contacto">Contacto</a>
-
 </nav>
 
+<button
+  class="menu-toggle"
+  id="menuToggle"
+  aria-label="Abrir menú"
+  aria-expanded="false"
+  aria-controls="mobileMenu">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+</div>
+
+<div class="mobile-menu" id="mobileMenu">
+  <nav class="mobile-nav" aria-label="Menú móvil">
+    <a href="index.html">Inicio</a>
+    <a href="tienda.html">Tienda</a>
+    <a href="index.html#areas">Áreas de salud</a>
+    <a href="ciencia.html">La ciencia</a>
+    <a href="sobre-alunexa.html">Sobre Alunexa</a>
+    <a href="sobre-alunexa.html#contacto">Contacto</a>
+  </nav>
 </div>
 
 </header>
 
-<main class="science-page">
+<main id="main" class="science-page">
 
 <section class="science-header">
 
@@ -198,6 +228,7 @@ La curcumina posee baja absorción natural. Por eso suele combinarse con piperin
 
 </footer>
 
+<script src="script.js" defer></script>
 </body>
 
 </html>

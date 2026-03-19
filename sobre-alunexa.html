@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sobre Alunexa</title>
   <meta name="description" content="Conocé la historia de Alunexa, una marca creada con el ideal de unir ciencia y naturaleza.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://alunexa-site.vercel.app/sobre-alunexa.html">
+  <meta property="og:title" content="Sobre Alunexa — Ciencia y naturaleza">
+  <meta property="og:description" content="Conocé la historia de Alunexa, una marca creada con el ideal de unir ciencia y naturaleza.">
+  <meta property="og:image" content="https://alunexa-site.vercel.app/assets/logo-alunexa.svg">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="Alunexa">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sobre Alunexa — Ciencia y naturaleza">
+  <meta name="twitter:description" content="Conocé la historia de Alunexa, una marca creada con el ideal de unir ciencia y naturaleza.">
 <link rel="icon" href="assets/logo-alunexa.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -172,6 +182,7 @@
   </style>
 </head>
 <body>
+  <a href="#main" class="sr-only">Saltar al contenido principal</a>
 
   <header class="site-header">
     <div class="container header-inner">
@@ -188,10 +199,32 @@
         <a href="sobre-alunexa.html">Sobre Alunexa</a>
         <a href="#contacto">Contacto</a>
       </nav>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="mobileMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <nav class="mobile-nav" aria-label="Menú móvil">
+        <a href="index.html">Inicio</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="index.html#areas">Áreas de salud</a>
+        <a href="index.html#ciencia">La ciencia</a>
+        <a href="sobre-alunexa.html">Sobre Alunexa</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
     </div>
   </header>
 
-  <main class="about-page">
+  <main id="main" class="about-page">
     <section class="about-hero">
       <h1>Nuestra historia comienza mucho antes del nacimiento de Alunexa.</h1>
       <p>Ciencia y naturaleza como ideal. Una marca creada para formular con criterio, basados en evidencia y pensados para acompañar el bienestar cotidiano.</p>
@@ -230,12 +263,13 @@
         <p><strong>Ciencia y naturaleza.</strong></p>
       </article>
 
-      <aside class="about-media-card" aria-hidden="true">
+      <aside class="about-media-card" aria-label="Próximamente">
         <div class="about-media-inner">
           <div class="about-media-placeholder">
             <div>
-              <h2>Videos demo </h2>
-              <p>Poner videos o fotos que tenemos que hacer aun.</p>
+              <div class="nad-tag">Próximamente</div>
+              <h2 class="heading-serif">Nuestro equipo y proceso</h2>
+              <p>Fotos y videos de nuestra historia, laboratorio y formulación.</p>
             </div>
           </div>
         </div>
@@ -282,5 +316,6 @@
     </div>
   </footer>
 
+  <script src="script.js" defer></script>
 </body>
 </html>
