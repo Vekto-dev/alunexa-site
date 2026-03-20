@@ -55,28 +55,32 @@
 }
 
 .product-card{
-  background:rgba(255,255,255,.9);
-  border:1px solid rgba(231,223,212,.95);
-  border-radius:24px;
-  padding:28px 24px 24px;
+  background:#fff;
+  border:1px solid rgba(231,223,212,.7);
+  border-radius:20px;
+  overflow:hidden;
   text-align:left;
-  box-shadow:0 14px 28px rgba(17,17,17,.05);\n      color:inherit;\n      cursor:pointer;
-  transition:all .24s ease;
+  box-shadow:0 4px 16px rgba(17,17,17,.06);
+  color:inherit;
+  cursor:pointer;
+  transition:all .28s ease;
   display:flex;
   flex-direction:column;
   min-height:100%;
 }
 
 .product-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 20px 34px rgba(17,17,17,.08);
+  transform:translateY(-5px);
+  box-shadow:0 16px 36px rgba(17,17,17,.10);
+  border-color:rgba(214,177,90,.35);
 }
 
 .product-card .img-wrap{
   position:relative;
   width:100%;
-  height:250px;
-  margin:0 auto 18px;
+  height:260px;
+  background:linear-gradient(160deg,#faf8f4 0%,#f2ede4 100%);
+  overflow:hidden;
 }
 
 .product-card .img-wrap img{
@@ -86,36 +90,47 @@
   height:100%;
   object-fit:contain;
   object-position:center;
-  filter:drop-shadow(0 16px 22px rgba(17,17,17,.16));
-  transition:opacity .35s ease;
+  padding:20px;
+  filter:drop-shadow(0 12px 20px rgba(17,17,17,.14));
+  transition:opacity .38s ease, transform .38s ease;
 }
 
 .product-card .img-wrap .img-nutricional{
   opacity:0;
+  transform:scale(1.04);
 }
 
 .product-card:hover .img-wrap .img-front{
   opacity:0;
+  transform:scale(.96);
 }
 
 .product-card:hover .img-wrap .img-nutricional{
   opacity:1;
+  transform:scale(1);
+}
+
+.product-card-body{
+  padding:22px 22px 20px;
+  display:flex;
+  flex-direction:column;
+  flex:1;
 }
 
 .product-card h3{
   font-family:"Noto Serif", serif;
-  font-size:1.42rem;
-  line-height:1.18;
-  margin:0 0 10px;
+  font-size:1.22rem;
+  line-height:1.22;
+  margin:0 0 8px;
   color:#27231f;
 }
 
 .product-card p{
-  font-size:.98rem;
-  line-height:1.5;
+  font-size:.93rem;
+  line-height:1.55;
   color:var(--muted);
-  margin:0 0 22px;
-  max-width:30ch;
+  margin:0 0 18px;
+  flex:1;
 }
 
 .buy-btn{
@@ -226,9 +241,11 @@
             <img class="img-front" src="assets/bisglicinato-magnesio.png" alt="Bisglicinato de Magnesio" loading="lazy">
             <img class="img-nutricional" src="assets/bisglicinato-magnesio-nutricional.png" alt="Nutricional Bisglicinato de Magnesio" loading="lazy">
           </div>
-          <h3>Bisglicinato de Magnesio</h3>
-          <p>Alta biodisponibilidad para relajación muscular y equilibrio del sistema nervioso.</p>
-          <span class="buy-btn">Ver producto</span>
+          <div class="product-card-body">
+            <h3>Bisglicinato de Magnesio</h3>
+            <p>Alta biodisponibilidad para relajación muscular y equilibrio del sistema nervioso.</p>
+            <span class="buy-btn">Ver producto</span>
+          </div>
         </a>
 
         <a class="product-card" href="producto.html?id=citrato-magnesio">
@@ -236,9 +253,11 @@
             <img class="img-front" src="assets/citrato-magnesio.png" alt="Citrato de Magnesio" loading="lazy">
             <img class="img-nutricional" src="assets/citrato-magnesio-nutricional.png" alt="Nutricional Citrato de Magnesio" loading="lazy">
           </div>
-          <h3>Citrato de Magnesio</h3>
-          <p>Equilibrio muscular, nervioso y digestivo para uso cotidiano.</p>
-          <span class="buy-btn">Ver producto</span>
+          <div class="product-card-body">
+            <h3>Citrato de Magnesio</h3>
+            <p>Equilibrio muscular, nervioso y digestivo para uso cotidiano.</p>
+            <span class="buy-btn">Ver producto</span>
+          </div>
         </a>
 
         <a class="product-card" href="producto.html?id=multimagnesio">
@@ -246,9 +265,11 @@
             <img class="img-front" src="assets/multimagnesio.png" alt="Multimagnesio" loading="lazy">
             <img class="img-nutricional" src="assets/multimagnesio-nutricional.png" alt="Nutricional Multimagnesio" loading="lazy">
           </div>
-          <h3>Multimagnesio</h3>
-          <p>Fórmula equilibrada con cinco formas de magnesio.</p>
-          <span class="buy-btn">Ver producto</span>
+          <div class="product-card-body">
+            <h3>Multimagnesio</h3>
+            <p>Fórmula equilibrada con cinco formas de magnesio.</p>
+            <span class="buy-btn">Ver producto</span>
+          </div>
         </a>
 
         <a class="product-card" href="producto.html?id=magnesio">
@@ -256,9 +277,11 @@
             <img class="img-front" src="assets/magnesio.png" alt="Magnesio" loading="lazy">
             <img class="img-nutricional" src="assets/magnesio-nutricional.png" alt="Nutricional Magnesio" loading="lazy">
           </div>
-          <h3>Magnesio</h3>
-          <p>Alivio digestivo, relajación y bienestar para acompañar el uso diario.</p>
-          <span class="buy-btn">Ver producto</span>
+          <div class="product-card-body">
+            <h3>Magnesio</h3>
+            <p>Alivio digestivo, relajación y bienestar para acompañar el uso diario.</p>
+            <span class="buy-btn">Ver producto</span>
+          </div>
         </a>
 
         <a class="product-card" href="producto.html?id=calcio-magnesio-vitd3">
@@ -266,9 +289,11 @@
             <img class="img-front" src="assets/calcio-magnesio-vitd3.png" alt="Calcio Magnesio y Vitamina D3" loading="lazy">
             <img class="img-nutricional" src="assets/calcio-magnesio-vitd3-nutricional.png" alt="Nutricional Calcio Magnesio Vitamina D3" loading="lazy">
           </div>
-          <h3>Calcio, Magnesio y Vitamina D3</h3>
-          <p>Soporte para salud ósea y muscular con vitamina D3.</p>
-          <span class="buy-btn">Ver producto</span>
+          <div class="product-card-body">
+            <h3>Calcio, Magnesio y Vitamina D3</h3>
+            <p>Soporte para salud ósea y muscular con vitamina D3.</p>
+            <span class="buy-btn">Ver producto</span>
+          </div>
         </a>
 
         <a class="product-card" href="producto.html?id=vitamina-c-zinc">
@@ -276,9 +301,11 @@
             <img class="img-front" src="assets/vitamina-c-zinc-d3.png" alt="Vitamina C Zinc y Vitamina D" loading="lazy">
             <img class="img-nutricional" src="assets/vitamina-c-zinc-d3-nutricional.png" alt="Nutricional Vitamina C Zinc Vitamina D" loading="lazy">
           </div>
-          <h3>Vitamina C, Zinc y Vitamina D</h3>
-          <p>Soporte inmunológico con zinc quelado y acción antioxidante.</p>
-          <span class="buy-btn">Ver producto</span>
+          <div class="product-card-body">
+            <h3>Vitamina C, Zinc y Vitamina D</h3>
+            <p>Soporte inmunológico con zinc quelado y acción antioxidante.</p>
+            <span class="buy-btn">Ver producto</span>
+          </div>
         </a>
 
         <a class="product-card" href="producto.html?id=vitamina-b12">
@@ -286,18 +313,22 @@
             <img class="img-front" src="assets/vitamina-b12.png" alt="Vitamina B12" loading="lazy">
             <img class="img-nutricional" src="assets/vitamina-b12-nutricional.png" alt="Nutricional Vitamina B12" loading="lazy">
           </div>
-          <h3>Vitamina B12</h3>
-          <p>Energía diaria, función neurológica y equilibrio metabólico.</p>
-          <span class="buy-btn">Ver producto</span>
+          <div class="product-card-body">
+            <h3>Vitamina B12</h3>
+            <p>Energía diaria, función neurológica y equilibrio metabólico.</p>
+            <span class="buy-btn">Ver producto</span>
+          </div>
         </a>
 
         <a class="product-card" href="producto.html?id=colageno-hidrolizado">
           <div class="img-wrap">
             <img class="img-front" src="assets/colageno-hidrolizado-vitamina-e.png" alt="Colágeno Hidrolizado y Vitamina E" loading="lazy">
           </div>
-          <h3>Colágeno Hidrolizado y Vitamina E</h3>
-          <p>Contribuye al cuidado de la piel, uñas y articulaciones.</p>
-          <span class="buy-btn">Ver producto</span>
+          <div class="product-card-body">
+            <h3>Colágeno Hidrolizado y Vitamina E</h3>
+            <p>Contribuye al cuidado de la piel, uñas y articulaciones.</p>
+            <span class="buy-btn">Ver producto</span>
+          </div>
         </a>
 
         <a class="product-card" href="producto.html?id=resveratrol">
@@ -305,9 +336,11 @@
             <img class="img-front" src="assets/resveratrol.png" alt="Resveratrol" loading="lazy">
             <img class="img-nutricional" src="assets/resveratrol-nutricional.png" alt="Nutricional Resveratrol" loading="lazy">
           </div>
-          <h3>Resveratrol</h3>
-          <p>Apoya la salud celular y la longevidad con perfil antioxidante.</p>
-          <span class="buy-btn">Ver producto</span>
+          <div class="product-card-body">
+            <h3>Resveratrol</h3>
+            <p>Apoya la salud celular y la longevidad con perfil antioxidante.</p>
+            <span class="buy-btn">Ver producto</span>
+          </div>
         </a>
 
       </div>
