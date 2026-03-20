@@ -54,6 +54,41 @@
       max-height: 420px;
       object-fit: contain;
       filter: drop-shadow(0 20px 28px rgba(17,17,17,.14));
+      transition: opacity .25s ease;
+    }
+
+    .product-thumbs {
+      display: flex;
+      gap: 10px;
+      margin-top: 16px;
+      justify-content: center;
+    }
+
+    .product-thumb {
+      width: 64px;
+      height: 64px;
+      border-radius: 12px;
+      border: 2px solid rgba(231,223,212,.7);
+      overflow: hidden;
+      cursor: pointer;
+      transition: border-color .2s;
+      background: rgba(255,253,250,.9);
+      padding: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .product-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: none;
+    }
+
+    .product-thumb.active,
+    .product-thumb:hover {
+      border-color: var(--gold);
     }
 
     .product-info { display: flex; flex-direction: column; gap: 28px; }
@@ -271,6 +306,7 @@
   <script>
     const PRODUCTS = {
       'bisglicinato-magnesio': {
+        nutricional: 'assets/bisglicinato-magnesio-nutricional.png',
         tnId: '1480616499',
         name: 'Bisglicinato de Magnesio',
         tag: 'Magnesio · Alta biodisponibilidad',
@@ -288,6 +324,7 @@
         wa: 'https://wa.me/5493417553252?text=Hola!%20Me%20interesa%20el%20Bisglicinato%20de%20Magnesio%20Alunexa.'
       },
       'citrato-magnesio': {
+        nutricional: 'assets/citrato-magnesio-nutricional.png',
         tnId: '1480617833',
         name: 'Citrato de Magnesio',
         tag: 'Magnesio · Equilibrio digestivo',
@@ -305,6 +342,7 @@
         wa: 'https://wa.me/5493417553252?text=Hola!%20Me%20interesa%20el%20Citrato%20de%20Magnesio%20Alunexa.'
       },
       'multimagnesio': {
+        nutricional: 'assets/multimagnesio-nutricional.png',
         tnId: '1480619771',
         name: 'Multimagnesio',
         tag: 'Magnesio · Fórmula completa',
@@ -322,6 +360,7 @@
         wa: 'https://wa.me/5493417553252?text=Hola!%20Me%20interesa%20el%20Multimagnesio%20Alunexa.'
       },
       'magnesio': {
+        nutricional: 'assets/magnesio-nutricional.png',
         tnId: '1480620093',
         name: 'Magnesio',
         tag: 'Magnesio · Uso diario',
@@ -339,6 +378,7 @@
         wa: 'https://wa.me/5493417553252?text=Hola!%20Me%20interesa%20el%20Magnesio%20Alunexa.'
       },
       'calcio-magnesio-vitd3': {
+        nutricional: 'assets/calcio-magnesio-vitd3-nutricional.png',
         tnId: '1480620335',
         name: 'Calcio, Magnesio y Vitamina D3',
         tag: 'Huesos · Soporte estructural',
@@ -356,6 +396,7 @@
         wa: 'https://wa.me/5493417553252?text=Hola!%20Me%20interesa%20Calcio%2C%20Magnesio%20y%20Vitamina%20D3%20Alunexa.'
       },
       'vitamina-c-zinc': {
+        nutricional: 'assets/vitamina-c-zinc-d3-nutricional.png',
         tnId: '1480620590',
         name: 'Vitamina C, Zinc y Vitamina D',
         tag: 'Defensas · Soporte inmunológico',
@@ -373,6 +414,7 @@
         wa: 'https://wa.me/5493417553252?text=Hola!%20Me%20interesa%20Vitamina%20C%2C%20Zinc%20y%20Vitamina%20D%20Alunexa.'
       },
       'vitamina-b12': {
+        nutricional: 'assets/vitamina-b12-nutricional.png',
         tnId: '1480621021',
         name: 'Vitamina B12',
         tag: 'Energía · Sistema nervioso',
@@ -407,6 +449,7 @@
         wa: 'https://wa.me/5493417553252?text=Hola!%20Me%20interesa%20el%20Col%C3%A1geno%20Hidrolizado%20con%20Vitamina%20E%20Alunexa.'
       },
       'resveratrol': {
+        nutricional: 'assets/resveratrol-nutricional.png',
         tnId: '1480622055',
         name: 'Resveratrol',
         tag: 'Longevidad · Salud celular',
@@ -453,8 +496,19 @@
         </nav>
 
         <div class="product-layout">
-          <div class="product-img-card">
-            <img src="${p.image}" alt="${p.name}">
+          <div>
+            <div class="product-img-card">
+              <img id="main-product-img" src="${p.image}" alt="${p.name}">
+            </div>
+            ${p.nutricional ? `
+            <div class="product-thumbs">
+              <button class="product-thumb active" onclick="switchImg('${p.image}', this)" aria-label="Ver frente del producto">
+                <img src="${p.image}" alt="Frente">
+              </button>
+              <button class="product-thumb" onclick="switchImg('${p.nutricional}', this)" aria-label="Ver información nutricional">
+                <img src="${p.nutricional}" alt="Nutricional">
+              </button>
+            </div>` : ''}
           </div>
 
           <div class="product-info">
@@ -496,6 +550,12 @@
           </div>
         </div>
       `;
+    }
+
+    function switchImg(src, btn) {
+      document.getElementById('main-product-img').src = src;
+      document.querySelectorAll('.product-thumb').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
     }
 
     function openCheckout(variantId) {

@@ -72,13 +72,34 @@
   box-shadow:0 20px 34px rgba(17,17,17,.08);
 }
 
-.product-card img{
+.product-card .img-wrap{
+  position:relative;
   width:100%;
   height:250px;
+  margin:0 auto 18px;
+}
+
+.product-card .img-wrap img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
   object-fit:contain;
   object-position:center;
-  margin:0 auto 18px;
   filter:drop-shadow(0 16px 22px rgba(17,17,17,.16));
+  transition:opacity .35s ease;
+}
+
+.product-card .img-wrap .img-nutricional{
+  opacity:0;
+}
+
+.product-card:hover .img-wrap .img-front{
+  opacity:0;
+}
+
+.product-card:hover .img-wrap .img-nutricional{
+  opacity:1;
 }
 
 .product-card h3{
@@ -201,63 +222,89 @@
       <div class="catalog">
 
         <a class="product-card" href="producto.html?id=bisglicinato-magnesio">
-          <img src="assets/bisglicinato-magnesio.png" alt="Bisglicinato de Magnesio" loading="lazy">
+          <div class="img-wrap">
+            <img class="img-front" src="assets/bisglicinato-magnesio.png" alt="Bisglicinato de Magnesio" loading="lazy">
+            <img class="img-nutricional" src="assets/bisglicinato-magnesio-nutricional.png" alt="Nutricional Bisglicinato de Magnesio" loading="lazy">
+          </div>
           <h3>Bisglicinato de Magnesio</h3>
           <p>Alta biodisponibilidad para relajación muscular y equilibrio del sistema nervioso.</p>
           <span class="buy-btn">Ver producto</span>
         </a>
 
         <a class="product-card" href="producto.html?id=citrato-magnesio">
-          <img src="assets/citrato-magnesio.png" alt="Citrato de Magnesio" loading="lazy">
+          <div class="img-wrap">
+            <img class="img-front" src="assets/citrato-magnesio.png" alt="Citrato de Magnesio" loading="lazy">
+            <img class="img-nutricional" src="assets/citrato-magnesio-nutricional.png" alt="Nutricional Citrato de Magnesio" loading="lazy">
+          </div>
           <h3>Citrato de Magnesio</h3>
           <p>Equilibrio muscular, nervioso y digestivo para uso cotidiano.</p>
           <span class="buy-btn">Ver producto</span>
         </a>
 
         <a class="product-card" href="producto.html?id=multimagnesio">
-          <img src="assets/multimagnesio.png" alt="Multimagnesio" loading="lazy">
+          <div class="img-wrap">
+            <img class="img-front" src="assets/multimagnesio.png" alt="Multimagnesio" loading="lazy">
+            <img class="img-nutricional" src="assets/multimagnesio-nutricional.png" alt="Nutricional Multimagnesio" loading="lazy">
+          </div>
           <h3>Multimagnesio</h3>
           <p>Fórmula equilibrada con cinco formas de magnesio.</p>
           <span class="buy-btn">Ver producto</span>
         </a>
 
         <a class="product-card" href="producto.html?id=magnesio">
-          <img src="assets/magnesio.png" alt="Magnesio" loading="lazy">
+          <div class="img-wrap">
+            <img class="img-front" src="assets/magnesio.png" alt="Magnesio" loading="lazy">
+            <img class="img-nutricional" src="assets/magnesio-nutricional.png" alt="Nutricional Magnesio" loading="lazy">
+          </div>
           <h3>Magnesio</h3>
           <p>Alivio digestivo, relajación y bienestar para acompañar el uso diario.</p>
           <span class="buy-btn">Ver producto</span>
         </a>
 
         <a class="product-card" href="producto.html?id=calcio-magnesio-vitd3">
-          <img src="assets/calcio-magnesio-vitd3.png" alt="Calcio Magnesio y Vitamina D3" loading="lazy">
+          <div class="img-wrap">
+            <img class="img-front" src="assets/calcio-magnesio-vitd3.png" alt="Calcio Magnesio y Vitamina D3" loading="lazy">
+            <img class="img-nutricional" src="assets/calcio-magnesio-vitd3-nutricional.png" alt="Nutricional Calcio Magnesio Vitamina D3" loading="lazy">
+          </div>
           <h3>Calcio, Magnesio y Vitamina D3</h3>
           <p>Soporte para salud ósea y muscular con vitamina D3.</p>
           <span class="buy-btn">Ver producto</span>
         </a>
 
         <a class="product-card" href="producto.html?id=vitamina-c-zinc">
-          <img src="assets/vitamina-c-zinc-d3.png" alt="Vitamina C Zinc y Vitamina D" loading="lazy">
+          <div class="img-wrap">
+            <img class="img-front" src="assets/vitamina-c-zinc-d3.png" alt="Vitamina C Zinc y Vitamina D" loading="lazy">
+            <img class="img-nutricional" src="assets/vitamina-c-zinc-d3-nutricional.png" alt="Nutricional Vitamina C Zinc Vitamina D" loading="lazy">
+          </div>
           <h3>Vitamina C, Zinc y Vitamina D</h3>
           <p>Soporte inmunológico con zinc quelado y acción antioxidante.</p>
           <span class="buy-btn">Ver producto</span>
         </a>
 
         <a class="product-card" href="producto.html?id=vitamina-b12">
-          <img src="assets/vitamina-b12.png" alt="Vitamina B12" loading="lazy">
+          <div class="img-wrap">
+            <img class="img-front" src="assets/vitamina-b12.png" alt="Vitamina B12" loading="lazy">
+            <img class="img-nutricional" src="assets/vitamina-b12-nutricional.png" alt="Nutricional Vitamina B12" loading="lazy">
+          </div>
           <h3>Vitamina B12</h3>
           <p>Energía diaria, función neurológica y equilibrio metabólico.</p>
           <span class="buy-btn">Ver producto</span>
         </a>
 
         <a class="product-card" href="producto.html?id=colageno-hidrolizado">
-          <img src="assets/colageno-hidrolizado-vitamina-e.png" alt="Colágeno Hidrolizado y Vitamina E" loading="lazy">
+          <div class="img-wrap">
+            <img class="img-front" src="assets/colageno-hidrolizado-vitamina-e.png" alt="Colágeno Hidrolizado y Vitamina E" loading="lazy">
+          </div>
           <h3>Colágeno Hidrolizado y Vitamina E</h3>
           <p>Contribuye al cuidado de la piel, uñas y articulaciones.</p>
           <span class="buy-btn">Ver producto</span>
         </a>
 
         <a class="product-card" href="producto.html?id=resveratrol">
-          <img src="assets/resveratrol.png" alt="Resveratrol" loading="lazy">
+          <div class="img-wrap">
+            <img class="img-front" src="assets/resveratrol.png" alt="Resveratrol" loading="lazy">
+            <img class="img-nutricional" src="assets/resveratrol-nutricional.png" alt="Nutricional Resveratrol" loading="lazy">
+          </div>
           <h3>Resveratrol</h3>
           <p>Apoya la salud celular y la longevidad con perfil antioxidante.</p>
           <span class="buy-btn">Ver producto</span>
