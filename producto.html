@@ -271,7 +271,7 @@
   <script>
     const PRODUCTS = {
       'bisglicinato-magnesio': {
-        tnId: '1480616499',
+        tnSlug: 'bisglicinato-de-magnesio',
         name: 'Bisglicinato de Magnesio',
         tag: 'Magnesio · Alta biodisponibilidad',
         tagline: 'Forma de magnesio con alta biodisponibilidad, ideal para la relajación muscular y el equilibrio del sistema nervioso.',
@@ -288,7 +288,7 @@
         wa: 'https://wa.me/5493417553252?text=Hola!%20Me%20interesa%20el%20Bisglicinato%20de%20Magnesio%20Alunexa.'
       },
       'citrato-magnesio': {
-        tnId: '1480617833',
+        tnSlug: 'citrato-de-magnesio',
         name: 'Citrato de Magnesio',
         tag: 'Magnesio · Equilibrio digestivo',
         tagline: 'Equilibrio muscular, nervioso y digestivo para el uso cotidiano.',
@@ -305,7 +305,7 @@
         wa: 'https://wa.me/5493417553252?text=Hola!%20Me%20interesa%20el%20Citrato%20de%20Magnesio%20Alunexa.'
       },
       'multimagnesio': {
-        tnId: '1480619771',
+        tnSlug: 'multimagnesio',
         name: 'Multimagnesio',
         tag: 'Magnesio · Fórmula completa',
         tagline: 'Fórmula equilibrada con cinco formas de magnesio para una cobertura integral.',
@@ -322,7 +322,7 @@
         wa: 'https://wa.me/5493417553252?text=Hola!%20Me%20interesa%20el%20Multimagnesio%20Alunexa.'
       },
       'magnesio': {
-        tnId: '1480620093',
+        tnSlug: 'magnesio',
         name: 'Magnesio',
         tag: 'Magnesio · Uso diario',
         tagline: 'Alivio digestivo, relajación y bienestar para acompañar el uso diario.',
@@ -339,7 +339,7 @@
         wa: 'https://wa.me/5493417553252?text=Hola!%20Me%20interesa%20el%20Magnesio%20Alunexa.'
       },
       'calcio-magnesio-vitd3': {
-        tnId: '1480620335',
+        tnSlug: 'calcio-magnesio-y-vitamina-d3',
         name: 'Calcio, Magnesio y Vitamina D3',
         tag: 'Huesos · Soporte estructural',
         tagline: 'Soporte integral para la salud ósea y muscular con vitamina D3 de alta potencia.',
@@ -356,7 +356,7 @@
         wa: 'https://wa.me/5493417553252?text=Hola!%20Me%20interesa%20Calcio%2C%20Magnesio%20y%20Vitamina%20D3%20Alunexa.'
       },
       'vitamina-c-zinc': {
-        tnId: '1480620590',
+        tnSlug: 'vitamina-c-zinc-y-vitamina-d',
         name: 'Vitamina C, Zinc y Vitamina D',
         tag: 'Defensas · Soporte inmunológico',
         tagline: 'Soporte inmunológico con zinc quelado, vitamina C y vitamina D para defensas activas.',
@@ -373,7 +373,7 @@
         wa: 'https://wa.me/5493417553252?text=Hola!%20Me%20interesa%20Vitamina%20C%2C%20Zinc%20y%20Vitamina%20D%20Alunexa.'
       },
       'vitamina-b12': {
-        tnId: '1480621021',
+        tnSlug: 'vitamina-b12',
         name: 'Vitamina B12',
         tag: 'Energía · Sistema nervioso',
         tagline: 'Energía diaria, función neurológica y equilibrio metabólico con metilcobalamina.',
@@ -390,7 +390,7 @@
         wa: 'https://wa.me/5493417553252?text=Hola!%20Me%20interesa%20la%20Vitamina%20B12%20Alunexa.'
       },
       'colageno-hidrolizado': {
-        tnId: '1480621601',
+        tnSlug: 'colageno-hidrolizado',
         name: 'Colágeno Hidrolizado y Vitamina E',
         tag: 'Nutricosmética · Piel y articulaciones',
         tagline: 'Contribuye al cuidado de la piel, uñas y articulaciones con colágeno hidrolizado y vitamina E.',
@@ -407,7 +407,7 @@
         wa: 'https://wa.me/5493417553252?text=Hola!%20Me%20interesa%20el%20Col%C3%A1geno%20Hidrolizado%20con%20Vitamina%20E%20Alunexa.'
       },
       'resveratrol': {
-        tnId: '1480622055',
+        tnSlug: 'resveratrol',
         name: 'Resveratrol',
         tag: 'Longevidad · Salud celular',
         tagline: 'Apoya la salud celular y la longevidad con un perfil antioxidante de alto espectro.',
@@ -485,7 +485,7 @@
             </div>
 
             <div class="buy-area">
-              <button class="btn-buy-main" onclick="openCheckout('${p.tnId}')">
+              <button class="btn-buy-main" onclick="openCheckout('${p.tnSlug}')">
                 Comprar
               </button>
               <a class="btn-wa" href="${p.wa}" target="_blank" rel="noopener">
@@ -498,8 +498,8 @@
       `;
     }
 
-    function openCheckout(variantId) {
-      const url = `https://alunexa.mitiendanube.com/checkout/v3/start?items[0][variant_id]=${variantId}&items[0][quantity]=1`;
+    function openCheckout(slug) {
+      const url = `https://alunexa.mitiendanube.com/productos/${slug}`;
       const w = 500, h = 700;
       const left = Math.round((screen.width - w) / 2);
       const top = Math.round((screen.height - h) / 2);
